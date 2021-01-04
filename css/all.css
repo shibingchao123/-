@@ -1,0 +1,697 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    color: #444;
+    background: #EEEEEE;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+}
+.all_bg{
+    width:100%;
+    height:100vh;
+    position: relative;
+}
+.fail_money_area{
+    width:100%;
+    z-index: 9999999999999999999999999999999999999999999999999999;
+    display: none;
+    height:100vh;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.success_money_area{
+    width:100%;
+    z-index: 98;
+    height:100vh;
+    display: none;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.success_money_area_bg{
+    width:100%;
+    z-index: 9999999999999999999999999999999999999999999999999999;
+    height:100vh;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.success_money_area_bg_fake{
+    position: absolute;
+    width:309px;
+    height:344px;
+    left:50%;
+    top:50%;
+    margin-left:-155px;
+    margin-top:-172px;
+    z-index: 99999999999;
+    background:url('../png/chance_area.png') no-repeat center;
+    background-size: cover;
+}
+.success_money_area_bg_fake_input{
+    position: absolute;
+    left:50%;
+    top:110px;
+    margin-left:-97px;
+    width: 194px;
+    height:20px;
+    background:white;
+}
+.success_money_area_bg_fake_btn{
+    position: absolute;
+    left:50%;
+   bottom:70px;
+    margin-left:-106px;
+    width: 212px;
+    height:61px;
+}
+.fail_money_area_img{
+    width:100%;
+    z-index: 97;
+    height:100vh;
+    display: none;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.start_index{
+    width:100%;
+    z-index: 99;
+    height:100vh;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.black_rule_explain{
+    width:100%;
+    z-index: 1000;
+    height:100vh;
+    display: none;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.pre_load{
+    width:100%;
+    z-index: 9999999;
+    height:100vh;
+    background: #eeeeee;
+    position: absolute;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+}
+.start_index_img{
+    width:100%;
+    z-index: 99;
+    height:100vh;
+    display: none;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.start_index_btn{
+    width:154px;
+    height:53px;
+}
+.start_index_btn_area{
+    position: absolute;
+    width:100%;
+    height:125px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    bottom:70px;
+}
+.all_img{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.game_pass_img{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    left:0;
+    display: none;
+    top:0;
+    z-index: 11;
+}
+.game_pass_img_rank{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    left:0;
+    display: none;
+    top:0;
+    z-index: 999;
+}
+.game_pass_img_rank_img_area{
+    width:320px;
+    height:530px;
+    position: relative;
+}
+.game_pass_img_rank_img{
+    width:320px;
+    height:530px;
+    left:0;
+    top:0;
+    position: absolute;
+}
+.game_pass_img_rank_content{
+    width:245px;
+    height:390px;
+    left:40px;
+    top:110px;
+    position: absolute;
+}
+.game_pass_img_rank_content_item{
+    width:245px;
+    height:37px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom:1px dotted white;
+}
+.game_pass_img_rank_content_item_avatar{
+    margin-left:17px;
+    width:33px;
+    height:33px;
+}
+.game_pass_img_rank_content_item_name{
+    margin-left:10px;
+    width:110px;
+    height:33px;
+    line-height:33px;
+    overflow: hidden;
+   text-align: center;
+    font-size: 13px;
+    font-family: HappyZcool;
+    font-weight: normal;
+    color: #000000;
+
+}
+.game_pass_img_rank_content_item_score{
+    margin-left:5px;
+    width:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:33px;
+    overflow: hidden;
+    font-size: 13px;
+    font-family: HappyZcool;
+    font-weight: normal;
+    color: #000000;
+}
+.next_pass_button_area{
+    width:100%;
+    height:40px;
+    position: absolute;
+    bottom:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:8;
+}
+.next_pass_button_area_success{
+    width:100%;
+    height:40px;
+    position: absolute;
+    bottom:100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index:8;
+}
+.next_pass_button{
+    width:125px;
+    height:40px;
+    display: none;
+}
+.restart_game_button{
+    width:125px;
+    height:40px;
+    display: none;
+}
+.towin_game_button{
+    width:125px;
+    height:40px;
+    display: none;
+}
+.towin_game_button_but_fail{
+    width:125px;
+    height:40px;
+    margin-left:20px;
+    display: none;
+}
+.top_function_area{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top_function_center{
+    width:300px;
+    height:180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.top_function_center_top{
+    width:100%;
+    height:80px;
+    color:white;
+    font-size:28px; 
+}
+.top_function_center_center{
+    width:100%;
+    height:22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top_function_center_center_img{
+    width:92px;
+    height:22px;
+}
+.top_function_time{
+    width:200px;
+    height:40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top_function_score{
+    width:200px;
+    height:40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top_function_center_bottom{
+    width:100%;
+    height:43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top_function_center_bottom_center{
+    width:222.5px;
+    height:43px;
+    position: relative;
+}
+.top_function_center_bottom_condition_area{
+    width:75px;
+    height:43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left:75px;
+    opacity: 0;
+}
+.top_function_center_bottom_condition_area2{
+    width:190px;
+    height:43px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left:15px;
+    top:0;
+    opacity: 0;
+
+}
+.top_function_center_bottom_condition_area2_left{
+    width:90px;
+    height:43px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.top_function_center_bottom_center_img{
+    position: absolute;
+    left:0;
+    top:0;
+    width:222.5px;
+    height:43px;
+}
+.top_function_center_bottom_condition_text{
+    width:30px;
+    font-size: 25px;
+    color: white;
+}
+.top_function_center_bottom_condition_text2{
+    width:30px;
+    font-size: 25px;
+    color: white;
+}
+.top_function_center_bottom_condition_text3{
+    width:30px;
+    font-size: 25px;
+    color: white;
+}
+.top_function_center_bottom_condition_icon{
+    width:35px;
+    height:35px;
+}
+.top_function_center_bottom_condition_icon2{
+    width:35px;
+    height:35px;
+}
+.top_function_center_bottom_condition_icon3{
+    width:35px;
+    height:35px;
+}
+.middle_game_area{
+    position: absolute;
+    left:0;
+    top:200px;
+    width:100%;
+    height:383px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time_right{
+    height:40px;
+    width:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#myDom{
+    opacity: 1;
+    z-index: 99999999999999999;
+}
+.gamearea_border{
+    position: absolute;
+    width:350px;
+    height:350px;
+}
+#content {
+    position: absolute;
+    width: 504px;  
+    height: 504px;
+    border-style: solid;
+    border-width: 4px;
+}
+.game_all_area{
+    z-index: 10;
+    width:100%;
+    height:400rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+
+#game {
+    width: 320px;
+    height: 320px;
+    left:10px;
+    z-index: 999;
+    top:20px;
+    background:url('../png/bg_40.png');
+    /* float: left; */
+}
+
+#canvas {
+    z-index: 1000;
+    width: 320px;
+    height: 320px;
+}
+
+table {
+    *border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child {
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.game_time {
+    width: 138px;
+    height: 138px;
+    margin: 80px 31px 8px 31px;
+}
+
+.pie {
+    width: 138px;
+    height: 138px;
+    border-radius: 69px;
+    position: absolute;
+}
+
+.pie1 {
+    clip: rect(0px,138px,138px,69px);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    background-color: #fff;
+}
+
+.pie2 {
+    clip: rect(0px,69px,138px,0px);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    background-color: #fff;
+}
+
+.hold {
+    width: 138px;
+    height: 138px;
+    position: absolute;
+    z-index: 1;
+}
+
+.bg {
+    width: 138px;
+    height: 138px;
+    border-radius: 69px;
+    position: absolute;
+    background-color: #4a89dc;
+}
+
+
+
+.button {
+    background: transparent;
+    vertical-align: middle;
+    text-align: center;
+    min-height: 1.5em;
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+    opacity: 0.9;
+    color: #FFF;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-shadow: rgba(0,0,0,0.9) 0px 1px 2px;
+    background: #434343;
+    border: 1px solid #242424;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -khtml-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -moz-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -o-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -webkit-transition: all 0.1s linear;
+    -khtml-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.button:hover {
+    -webkit-box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -khtml-box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -moz-box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -o-box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+}
+
+.button:active {
+    -webkit-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px,inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -khtml-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px,inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -moz-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -o-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+}
+
+.shine {
+    display: block;
+    position: relative;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+    background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    padding: 0px 12px;
+    top: -6px;
+    left: -12px;
+    height: 1px;
+    -webkit-box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+    -khtml-box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+    -moz-box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+    -o-box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+    box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -khtml-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover .shine {
+    left: 12px;
+}
+
+.button:active .shine {
+    opacity: 0;
+}
+
+.button.gray {
+    background: #656d78;
+}
+
+.button.blue {
+    background: #5d9cec;
+}
+
+.button.green {
+    background: #477343;
+}
+
+.button.red {
+    background: #723131;
+}
+
+.button.purple {
+    background: #4b3f5e;
+}
+
+.button.orange {
+    background: #624529;
+}
+
+#btn {
+    padding-bottom: 12px;
+}
+
+#button_one {
+    width: 150px;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+#button_two_first {
+    width: 60px;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+#button_two_second {
+    width: 60px;
+    margin-top: 12px;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>对对碰</title> 
+  <link rel="stylesheet" href="css/all.css" /> 
+  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script> 
+  <script type="text/javascript" src="lib/layer/layer.js"></script> 
+</head>
+<body  onselectstart="return false" >
+  <!-- <div id="btn"> 
+    <div id="button_one" class="button blue" onclick="javascript:restart();">
+     <div class="shine"></div>新游戏
+    </div>
+    <div>  -->
+      <audio id="bgm" src="mp3/bgm.mp3" autoplay="autoplay" loop="loop"></audio> 
+      <audio id="hit" src="mp3/hit.mp3"></audio> 
+      <audio id="over" src="mp3/over.mp3"></audio> 
+     </div> 
+     <!-- 总背景区域开始 -->
+     <div  class='all_bg' >
+       <!--中奖开始  -->
+      <div class='success_money_area'  >
+        <img src="./png/have_change_bg.png"    class='success_money_area_bg' >
+        <div class='success_money_area_bg_fake' >
+         <input type="text"   class='success_money_area_bg_fake_input' id='success_money_area_bg_fake_input'  >
+         <img src="./png/get_btn.png"   onclick="saveFortureInfo()"   class='success_money_area_bg_fake_btn'>
+        </div>
+      </div>
+       <!-- 中奖结束 -->
+       <!-- 没中奖开始 -->
+      <div class='fail_money_area' >
+        <img src="./png/no_change.png"   onclick="cllbackPassimg()"  class='fail_money_area_img'  >
+      </div>
+       <!-- 没中奖结束 -->
+       <!--  首页开始页面开始-->
+       <div  class='start_index' >
+         <div  class='pre_load' >加载图片中,请勿刷新页面</div>
+          <img  class='start_index_img'  src="./png/index.png" >
+          <img src="./png/rule.png"  class='black_rule_explain'   onclick="changeRuleShow(false)" >
+          <div  class='start_index_btn_area' >
+            <img src="./png/start_btn.png"  class='start_index_btn'    onclick='hideIndex()'  >
+            <img src="./png/game_rule_btn.png"     onclick="changeRuleShow(true)" class='start_index_btn' >
+          </div>
+       </div>
+       <!-- 首页开始页面结束 -->
+       <!-- 背景图开始 -->
+      <img src="./png/game_bg.jpg"   class='all_img' >
+      <img src="./png/pass4.png"  class='game_pass_img' >
+      <div class='game_pass_img_rank' >
+        <div  class='game_pass_img_rank_img_area' >
+          <img src="./png/rank_bg.png"    onclick='hideRank()' class='game_pass_img_rank_img' >
+          <div  class="game_pass_img_rank_content" >
+              <!-- 一项item开始 -->
+              <div  class="game_pass_img_rank_content_item" >
+                  <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar1'  >
+                  <div  class='game_pass_img_rank_content_item_name'  id='rank_name1'  ></div>
+                  <div  class='game_pass_img_rank_content_item_score' id='rank_score1'  ></div>
+              </div>
+               <!-- 一项item结束 -->
+                             <!-- 一项item开始 -->
+              <div  class="game_pass_img_rank_content_item" >
+                <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar2'  >
+                <div  class='game_pass_img_rank_content_item_name'  id='rank_name2'  ></div>
+                <div  class='game_pass_img_rank_content_item_score' id='rank_score2'  ></div>
+            </div>
+             <!-- 一项item结束 -->
+                           <!-- 一项item开始 -->
+                           <div  class="game_pass_img_rank_content_item" >
+                            <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar3'  >
+                            <div  class='game_pass_img_rank_content_item_name'  id='rank_name3'  ></div>
+                            <div  class='game_pass_img_rank_content_item_score' id='rank_score3'  ></div>
+                        </div>
+                         <!-- 一项item结束 -->
+                                       <!-- 一项item开始 -->
+              <div  class="game_pass_img_rank_content_item" >
+                <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar4'  >
+                <div  class='game_pass_img_rank_content_item_name'  id='rank_name4'  ></div>
+                <div  class='game_pass_img_rank_content_item_score' id='rank_score4'  ></div>
+            </div>
+             <!-- 一项item结束 -->
+                           <!-- 一项item开始 -->
+                           <div  class="game_pass_img_rank_content_item" >
+                            <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar5'  >
+                            <div  class='game_pass_img_rank_content_item_name'  id='rank_name5'  ></div>
+                            <div  class='game_pass_img_rank_content_item_score' id='rank_score5'  ></div>
+                        </div>
+                         <!-- 一项item结束 -->
+                                       <!-- 一项item开始 -->
+              <div  class="game_pass_img_rank_content_item" >
+                <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar6'  >
+                <div  class='game_pass_img_rank_content_item_name'  id='rank_name6'  ></div>
+                <div  class='game_pass_img_rank_content_item_score' id='rank_score6'  ></div>
+            </div>
+             <!-- 一项item结束 -->
+                           <!-- 一项item开始 -->
+                           <div  class="game_pass_img_rank_content_item" >
+                            <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar7'  >
+                            <div  class='game_pass_img_rank_content_item_name'  id='rank_name7'  ></div>
+                            <div  class='game_pass_img_rank_content_item_score' id='rank_score7'  ></div>
+                        </div>
+                         <!-- 一项item结束 -->
+                                       <!-- 一项item开始 -->
+              <div  class="game_pass_img_rank_content_item" >
+                <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar8'  >
+                <div  class='game_pass_img_rank_content_item_name'  id='rank_name8'  ></div>
+                <div  class='game_pass_img_rank_content_item_score' id='rank_score8'  ></div>
+            </div>
+             <!-- 一项item结束 -->
+                           <!-- 一项item开始 -->
+                           <div  class="game_pass_img_rank_content_item" >
+                            <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar9'  >
+                            <div  class='game_pass_img_rank_content_item_name'  id='rank_name9'  ></div>
+                            <div  class='game_pass_img_rank_content_item_score' id='rank_score9'  ></div>
+                        </div>
+                         <!-- 一项item结束 -->
+                                       <!-- 一项item开始 -->
+              <div  class="game_pass_img_rank_content_item" >
+                <img src=""   class='game_pass_img_rank_content_item_avatar'   id='rank_avatar10'  >
+                <div  class='game_pass_img_rank_content_item_name'  id='rank_name10'  ></div>
+                <div  class='game_pass_img_rank_content_item_score' id='rank_score10'  ></div>
+            </div>
+             <!-- 一项item结束 -->
+       
+                          
+          </div>
+        </div>
+          
+      </div>
+    
+      <div  class='next_pass_button_area' >
+         <img src="./png/next_btn.png"   onclick="start(ALLTIME)"  class='next_pass_button'  >
+         <img src="./png/re_start.png"   onclick="beginFromOne()"  class='restart_game_button'  >
+         <img src="./png/lottery.png"   onclick="toWin()"  class='towin_game_button_but_fail'  >
+      </div>
+      <div  class='next_pass_button_area_success' >
+        <img src="./png/lottery.png"   onclick="toWin()"  class='towin_game_button'  >
+        <img src="./png/rank_pic.png"   onclick="toRank()"  class='towin_game_button'  >
+     </div>
+
+     
+      <!-- 背景图结束 -->
+      <!-- 顶部功能区开始 -->
+      <div class="top_function_area" >
+        <div class='top_function_center' >
+          <div  class='top_function_center_top' >
+              <div  class='top_function_time' >
+                <div>时间</div>
+                <div class='time_right innter_time' ></div>
+              </div>
+              <div  class='top_function_score' >
+                <div id='sssss'  > 分数</div>
+                <div class='time_right score' ></div>
+              </div>
+          </div>
+          <!--  -->
+          <div   class='top_function_center_center' >
+            <img src="./png/card1.png"  class="top_function_center_center_img" >
+          </div>
+          <!--  -->
+          <div  class='top_function_center_bottom' >
+              <div  class='top_function_center_bottom_center' >
+                <img src="./png/condition_pic.png"  class='top_function_center_bottom_center_img' >
+                <!-- 一个条件开始 -->
+                <div class='top_function_center_bottom_condition_area' >
+                    <img class='top_function_center_bottom_condition_icon'  src="./svg/mask.png" >
+                    <div class='top_function_center_bottom_condition_text'  >x7</div>
+                </div>
+                <!-- 一个条件结束 -->
+                <!-- 两个条件开始 -->
+                <div class='top_function_center_bottom_condition_area2' >
+                  <div  class='top_function_center_bottom_condition_area2_left' >
+                    <img class='top_function_center_bottom_condition_icon2'  src="./svg/soap.png" >
+                    <div class='top_function_center_bottom_condition_text2'  >x7</div>
+                  </div>
+                  <div  class='top_function_center_bottom_condition_area2_left' >
+                    <img class='top_function_center_bottom_condition_icon3'  src="./svg/mask.png" >
+                    <div class='top_function_center_bottom_condition_text3'  >x7</div>
+                  </div>
+                </div>
+                <!-- 两个条件结束 -->
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- 顶部功能区结束 -->
+      <!-- 游戏区域开始 -->
+      <div  class='middle_game_area' >
+      <!-- 游戏背景图开始 -->
+        <img src="./png/map_nprder.png" class='gamearea_border' >
+      <!-- 游戏背景图结束 -->
+      <!-- 对对碰区域开始 -->
+      <div  class='game_all_area' >
+  <div id="game"> 
+    <canvas id="canvas" width="320px" height="320px" onmousedown="mouse_down(event)" onmouseup="mouse_up(event)"    onmousemove="mouse_move(event)" onmouseout="mouse_touch_end()"> 
+      <!-- <canvas id="canvas" width="320px" height="320px" touchstart="mouse_down(event)" touchend="mouse_up(event)" onmousemove="mouse_move(event)" onmouseout="mouse_touch_end()">  -->
+    </canvas> 
+   </div> 
+    </div>
+      <!-- 对对碰区域结束 -->
+      </div>
+      <!-- 游戏区域结束 -->
+     </div>
+     <!-- 总背景区域结束 -->
+</body>
+</html> 
+<script src='https://res.wx.qq.com/open/js/jweixin-1.2.0.js'></script>
+<script type="text/javascript" src="js/all.js"></script>  
+<script>
+
+  //getCode()
+  wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function() {
+        var globalAudio=document.getElementById("bgm");
+        setTimeout(function(){
+           globalAudio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () { 
+               globalAudio.play();
+            }, false); 
+        },10)
+    });
+
+    //getprobability()
+
+
+    setTimeout(() => {
+       searchFirst()
+    }, 15000);
+   
+
+
+
+
+
+
+
+</script>
